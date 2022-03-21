@@ -7,6 +7,8 @@ service GrpcPlatform{
 
 message GetAllRequest{}
 
+// First Step: Define the structure for the data you want to 
+// serialize. 
 message GrpcPlatformModel{
   int32 platformId = 1;
   string name = 2;

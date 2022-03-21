@@ -16,6 +16,12 @@ namespace PlatformService.SyncDataServices.Grpc
       _mapper = mapper;
     }
 
+    /// <summary>
+    /// Expose a local, in-process function that implements a business operation. 
+    /// </summary>
+    /// <param name="request"></param>
+    /// <param name="context"></param>
+    /// <returns></returns>
     public override Task<PlatformResponse> GetAllPlatforms(GetAllRequest request, ServerCallContext context)
     {
       var response = new PlatformResponse();
