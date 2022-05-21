@@ -6,8 +6,16 @@ using PlatformService.Models;
 
 namespace PlatformService.Data
 {
+  /// <summary>
+  /// Invoke to apply the latest Entity Framework migrations to the target SQL Server image running. 
+  /// </summary>
   public static class PreDb
   {
+    /// <summary>
+    /// Pass along the selected AppDbContext 
+    /// </summary>
+    /// <param name="app"></param>
+    /// <param name="isProduction"></param>
     public static void PrepData(IApplicationBuilder app, bool isProduction)
     {
       using (var serviceScope = app.ApplicationServices.CreateScope())

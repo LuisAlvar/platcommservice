@@ -45,14 +45,17 @@ namespace PlatformService
                 services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMem"));
             }
             
-            //Registering our repo 
+            //Registering our repo/factory pattern objects... allow these objects to be introduce via dependency injection 
             services.AddScoped<IPlatformRepo, PlatformRepo>();
-
-            services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
-            services.AddSingleton<IMessageBusClient, MessageBusClient>(); //8:12
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
             
+            //Setup Http Client: internal communication between other services 
+            services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
+
+            //Setup GRPC: internal communication between other services
             services.AddGrpc();
 
+            //Setup AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddControllers();

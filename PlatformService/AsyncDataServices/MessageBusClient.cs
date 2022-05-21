@@ -6,6 +6,9 @@ using RabbitMQ.Client;
 
 namespace PlatformService.AsyncDataServices
 {
+  /// <summary>
+  /// Implementation of IMessageBusClient to send data async from Platform service to Message Queue via RabbitMQ
+  /// </summary>
   public class MessageBusClient : IMessageBusClient
   {
     private readonly IConfiguration _configuration;

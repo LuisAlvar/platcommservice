@@ -5,6 +5,10 @@ using PlatformService.Models;
 
 namespace PlatformService.Data 
 {
+
+  /// <summary>
+  /// Implementation of the main functions exposed for the controller.
+  /// </summary>
   public class PlatformRepo : IPlatformRepo
   {
     private readonly AppDbContext _context;

@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PlatformService.Dtos
 {
+  /// <summary>
+  /// A variant class of Platform class, only contains properties need to create a Platform class.
+  /// </summary>
   public class PlatformCreateDto
   {
     [Required]

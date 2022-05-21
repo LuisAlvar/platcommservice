@@ -5,6 +5,9 @@ using PlatformService.Data;
 
 namespace PlatformService.SyncDataServices.Grpc
 {
+  /// <summary>
+  /// Exposing methods for external services via GRPC 
+  /// </summary>
   public class GrpcPlatformService: GrpcPlatform.GrpcPlatformBase
   {
     private readonly IPlatformRepo _repo;
@@ -17,7 +20,7 @@ namespace PlatformService.SyncDataServices.Grpc
     }
 
     /// <summary>
-    /// Expose a local, in-process function that implements a business operation. 
+    /// Expose a local, in-process function that implements a business operation, Fetch all of the Platform.
     /// </summary>
     /// <param name="request"></param>
     /// <param name="context"></param>

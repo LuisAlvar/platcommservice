@@ -4,6 +4,9 @@ using PlatformService.Models;
 
 namespace PlatformService.Profiles
 {
+  /// <summary>
+  /// Using functionality from AutoMapper, we explicitly layout the mapping between primary objects and DTO objects.
+  /// </summary>
   public class PlatformsProfile: Profile
   {
     public PlatformsProfile()

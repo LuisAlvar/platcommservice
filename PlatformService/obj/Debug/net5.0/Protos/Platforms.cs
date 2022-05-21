@@ -179,6 +179,10 @@ namespace PlatformService {
 
   }
 
+  /// <summary>
+  /// First Step: Define the structure for the data you want to 
+  /// serialize. 
+  /// </summary>
   public sealed partial class GrpcPlatformModel : pb::IMessage<GrpcPlatformModel>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage

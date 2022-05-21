@@ -7,6 +7,10 @@ using PlatformService.Dtos;
 
 namespace PlatformService.SyncDataServices.Http
 { 
+  /// <summary>
+  /// Implementation of ICommandDataClient to send data sync from Platform service to Command service via HttpClient. 
+  /// Dependency Injection onto the controller. 
+  /// </summary>
   public class HttpCommandDataClient: ICommandDataClient
   {
     private readonly HttpClient _httpClient;
@@ -17,8 +21,14 @@ namespace PlatformService.SyncDataServices.Http
       _configuration = configuration;
     }
 
+    /// <summary>
+    /// Async Task Method: Invoke to notify the Command Service when a new platform as been added to Platform Service
+    /// </summary>
+    /// <param name="plat">A variant of the Platform object</param>
+    /// <returns></returns>
     public async Task SendPlatformToCommand(PlatformReadDto plat)
     {
+      //Payload
       var httpContent = new StringContent(
         JsonSerializer.Serialize(plat)
         , Encoding.UTF8
