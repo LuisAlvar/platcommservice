@@ -5,6 +5,9 @@ using PlatformService;
 
 namespace CommandsService.Profiles
 {
+  /// <summary>
+  /// AutoMapper Required: Class that contains all of the explicit mapping between Platform and its like variants. 
+  /// </summary>
   public class PlatformProfile: Profile
   {
     public PlatformProfile()

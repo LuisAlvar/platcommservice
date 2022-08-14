@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CommandsService.Models
 {
+  /// <summary>
+  /// The essential Platform class used to create the SQL Table via Entity Framework
+  /// </summary>
   public class Platform
   {
     [Key]

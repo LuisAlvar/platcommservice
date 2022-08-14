@@ -7,8 +7,15 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CommandsService.Data
 {
+  /// <summary>
+  /// Invoked to apply the latest migrations to the selected target SQL Server image.
+  /// </summary>
   public static class PreDb
   {
+    /// <summary>
+    /// At the start of the service - invoke this to populate the SQL Server artifacts. 
+    /// </summary>
+    /// <param name="applicationBuilder"></param>
     public static void InitialMigration(IApplicationBuilder applicationBuilder)
     {
       using(var serviceScope = applicationBuilder.ApplicationServices.CreateScope())

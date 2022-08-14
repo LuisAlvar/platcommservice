@@ -7,9 +7,19 @@ using PlatformService;
 
 namespace CommandsService.SyncDataServices.Grpc
 {
+  /// <summary>
+  /// GRPC Service class: Used to fetch all existing Platform records
+  /// </summary>
   public class PlatformDataClient : IPlatformDataClient
   {
+    /// <summary>
+    /// .NET built-in interface for appsetting.json
+    /// </summary>
     private IConfiguration _configuration;
+
+    /// <summary>
+    /// AutoMapper built-in interface
+    /// </summary>
     private IMapper _mapper;
 
     public PlatformDataClient(IConfiguration configuration, IMapper mapper)
@@ -18,6 +28,10 @@ namespace CommandsService.SyncDataServices.Grpc
       _mapper = mapper;
     }
 
+    /// <summary>
+    /// GRPC service call: To fetch all of the Platform records via Platform API.
+    /// </summary>
+    /// <returns></returns>
     public IEnumerable<Platform> ReturnAllPlatforms()
     {
       System.Console.WriteLine($"---> Calling GRPC Service {_configuration["GrpcPlatform"]}");

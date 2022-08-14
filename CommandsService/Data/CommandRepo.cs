@@ -5,6 +5,9 @@ using CommandsService.Models;
 
 namespace CommandsService.Data
 {
+  /// <summary>
+  /// Implementation of ICommandRepo to only expose the required functionality allow with the controller.
+  /// </summary>
   public class CommandRepo : ICommandRepo
   {
     private readonly AppDbContext _context;

@@ -7,9 +7,19 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace CommandsService.EventProcessing
 {
+  /// <summary>
+  /// 
+  /// </summary>
   public class EventProcessor : IEventProcessor
   {
+    /// <summary>
+    /// AutoMapper built-in interface
+    /// </summary>
     private readonly IMapper _mapper;
+
+    /// <summary>
+    /// .NET built-in inteface on the apps services 
+    /// </summary>
     private readonly IServiceScopeFactory _scopeFactory;
 
     public EventProcessor(IServiceScopeFactory scopeFactory, IMapper mapper)
@@ -18,6 +28,10 @@ namespace CommandsService.EventProcessing
       _scopeFactory = scopeFactory;
     }
 
+    /// <summary>
+    /// Main Method: Depending on the message the function will preform a design task.
+    /// </summary>
+    /// <param name="message">An incoming message from RabbitMQ.</param>
     public void ProcessEvent(string message)
     {
       var eventType = DetermineEvent(message);
@@ -32,6 +46,11 @@ namespace CommandsService.EventProcessing
       }
     }
 
+    /// <summary>
+    /// Helper Method: Based on the incoming message we will determine a EventType. 
+    /// </summary>
+    /// <param name="notificationMessage">An incoming message from RabbitMQ</param>
+    /// <returns></returns>
     private EventType DetermineEvent(string notificationMessage)
     {
       System.Console.WriteLine("---> Determining Event");
@@ -48,6 +67,10 @@ namespace CommandsService.EventProcessing
       }
     }
     
+    /// <summary>
+    /// Helper Method: A design task to deserialize message to PlatformPublishedDto and mapp object to a Platform, check if platform exits if not then add the platform to the back-end. 
+    /// </summary>
+    /// <param name="platformPublishedMessage">An income message from RabbitMQ</param>
     private void addPlatform(string platformPublishedMessage)
     {
       using(var scope = _scopeFactory.CreateScope())
@@ -78,6 +101,9 @@ namespace CommandsService.EventProcessing
 
   }
 
+  /// <summary>
+  /// The event type we are handling with this class
+  /// </summary>
   enum EventType
   {
     PlatformPublish,

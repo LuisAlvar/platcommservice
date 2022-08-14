@@ -2,6 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CommandsService.Models
 {
+  /// <summary>
+  /// The essential Command class used to create the SQL Table via Entity Framework
+  /// </summary>
   public class Command
   {
     [Key]

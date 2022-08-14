@@ -40,8 +40,10 @@ namespace CommandsService
             services.AddSingleton<IEventProcessor, EventProcessor>();
             services.AddScoped<IPlatformDataClient, PlatformDataClient>();
 
+            //Adding a background service 
             services.AddHostedService<MessageBusSubscriber>();
 
+            //Setup: AutoMapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddSwaggerGen(c =>

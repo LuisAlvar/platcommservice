@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CommandsService.Data
 {
+  /// <summary>
+  /// The Entity Framework DbContext for this service
+  /// </summary>
   public class AppDbContext: DbContext
   {
     public AppDbContext(DbContextOptions<AppDbContext> options): base (options)

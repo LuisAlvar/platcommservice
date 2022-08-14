@@ -10,7 +10,7 @@ using RabbitMQ.Client.Events;
 namespace CommandsService.AsyncDataServices
 {
   /// <summary>
-  /// 
+  /// A background service - Command service will be listening for any message comming from RabbitMQ Message Queue
   /// </summary>
   public class MessageBusSubscriber : BackgroundService
   {

@@ -3,6 +3,9 @@ using CommandsService.Models;
 
 namespace CommandsService.Data
 {
+  /// <summary>
+  /// Using factory pattern to expose the only DbContext functionality this service will provide access within the controller.
+  /// </summary>
   public interface ICommandRepo
   {
     bool SaveChange();
