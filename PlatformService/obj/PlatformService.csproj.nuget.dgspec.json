@@ -1,37 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NETProjects\\Microservices\\PlatCommandProject\\PlatformService\\PlatformService.csproj": {}
+    "/Users/luisalvarez/Documents/netcore/platcommservice/PlatformService/PlatformService.csproj": {}
   },
   "projects": {
-    "C:\\.NETProjects\\Microservices\\PlatCommandProject\\PlatformService\\PlatformService.csproj": {
+    "/Users/luisalvarez/Documents/netcore/platcommservice/PlatformService/PlatformService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NETProjects\\Microservices\\PlatCommandProject\\PlatformService\\PlatformService.csproj",
+        "projectUniqueName": "/Users/luisalvarez/Documents/netcore/platcommservice/PlatformService/PlatformService.csproj",
         "projectName": "PlatformService",
-        "projectPath": "C:\\.NETProjects\\Microservices\\PlatCommandProject\\PlatformService\\PlatformService.csproj",
-        "packagesPath": "C:\\Users\\alvar\\.nuget\\packages\\",
-        "outputPath": "C:\\.NETProjects\\Microservices\\PlatCommandProject\\PlatformService\\obj\\",
+        "projectPath": "/Users/luisalvarez/Documents/netcore/platcommservice/PlatformService/PlatformService.csproj",
+        "packagesPath": "/Users/luisalvarez/.nuget/packages/",
+        "outputPath": "/Users/luisalvarez/Documents/netcore/platcommservice/PlatformService/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alvar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/luisalvarez/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -51,25 +44,29 @@
             },
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.38.0, )"
+              "version": "[2.47.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[6.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[6.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[6.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[6.0.8, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             },
             "RabbitMQ.Client": {
               "target": "Package",
@@ -98,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
         }
       }
     }
