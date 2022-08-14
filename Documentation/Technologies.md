@@ -31,3 +31,18 @@
 * Relies on "Protocol Buffers" aka Protobuf to defined the contract between end points 
 * Mutli-language support (C# client can call a Ruby service)
 * Frequently used as a method of service to service communication
+
+
+# RabbitMQ installation 
+
+## Apple M1 Pro ARM 
+* you will need to pull the following image and tag from docker: 
+  ```bash 
+  docker pull arm64v8/rabbitmq:3-management 
+  ```
+* You run the contain in deatached mode 
+  ```bash 
+   docker run -d --hostname my-rabbit --name some-rabbit -p 5672:15672 arm64v8/rabbitmq:3-management
+  ```
+  Remidner the port within the docker engine is 15672 and the port for external access is 5672
+* 

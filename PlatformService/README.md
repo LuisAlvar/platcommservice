@@ -17,3 +17,22 @@ A .NET service development walkthought with Les Jackson. This is a template proj
   dotnet build 
   dotnet run 
 ```
+
+## Building Image 
+
+```bash
+  docker build -t luisenalvar/platformservice .
+```
+
+## Running a Container based on an Image 
+8080 is the external port 
+
+```bash
+  docker run -p 8080:80 -d luisenalvar/platformservice
+```
+
+## Uploading the Image to the Docker Hub
+
+```bash 
+  docker push luisenalvar/platformservice 
+```
